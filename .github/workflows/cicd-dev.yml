@@ -12,8 +12,8 @@ env:
   APP_NAME: image-app
   APP_IMAGE_NAME: image-app
   APP_IMAGE_TAG: dev
-  REPOSITORY_URL: 
-  REPOSITORY_NAME:
+  REPOSITORY_URL: https://github.com/vasusharma227/gha-python-image-app.git
+  REPOSITORY_NAME: "gha-python-image-app"
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
   CONTAINER_REGISTRY_PULL_SECRET: $ {{ secrete.QUAY_DOCKER_CONFIG_JSON_PULL_SECRET }}
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [lint]
     steps:
-    -uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
     - name: Set up Python Environment
       uses: action/setup-python@v2
