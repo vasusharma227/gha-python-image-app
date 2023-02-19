@@ -1,0 +1,18 @@
+name: CI/CD workflow for Dev Environment
+
+on:
+  push:
+    branches:
+    - feat/family
+
+jobs:
+  hello:
+    run-on: ubuntu-latest
+    steps:
+      - name: step1
+        run: date
+      - name: step2
+        run: |
+          pwd
+          ls
+      
