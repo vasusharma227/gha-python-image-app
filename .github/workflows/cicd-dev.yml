@@ -109,6 +109,6 @@ jobs:
           sudo chown root app.py
           sudo systemctl enable image-app.service
           sudo systemctl restart image-app.service
-          sudo systemctl status image-app.service  | grep -i "active"
+          sudo systemctl status image-app.service | grep -i "active"
           pwd && ls -la
 
